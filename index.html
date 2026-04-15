@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <!-- 👇 修改网页标题，显示在浏览器标签页上 -->
+    <title>无畏契约 · 你的本命特工是谁？</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 头部区域 -->
+        <header class="quiz-header">
+            <!-- 👇 修改主标题 -->
+            <h1>⚡ 特工协议 · 镜像测试 ⚡</h1>
+            <!-- 👇 修改副标题 -->
+            <p class="subtitle">回答几个问题，找到与你灵魂共鸣的无畏契约特工</p>
+            
+            <!-- 进度条区域保持不变 -->
+            <div class="progress-container">
+                <div class="progress-text">
+                    <span id="current-question-num">1</span>/<span id="total-questions">5</span>
+                </div>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" id="progress-fill"></div>
+                </div>
+            </div>
+        </header>
+        <!-- 开始界面（首页） -->
+        <div id="start-section" class="start-section">
+            <div class="start-card">
+                <div class="start-divider"></div>
+                <p class="start-disclaimer">※ 本测试仅供娱乐，结果不代表官方设定。</p>
+                <p class="start-credit">by sunny_sneeze</p>
+                <button id="start-btn" class="btn btn-start">▶ 开始测试</button>
+            </div>
+        </div>
+
+        <!-- 主测试区域 -->
+        <main id="quiz-section" class="quiz-section">
+            <h2 id="question-text" class="question-text">加载题目中...</h2>
+            <div id="options-container" class="options-container"></div>
+            
+            <div class="nav-buttons">
+                <button id="prev-btn" class="btn btn-secondary">← 上一题</button>
+                <button id="next-btn" class="btn btn-primary">下一题 →</button>
+            </div>
+            <!-- 👇 修改提交按钮文字 -->
+            <button id="submit-btn" class="btn btn-submit">🔍 揭示我的特工</button>
+        </main>
+        <div id="loading-section" class="loading-section hidden">
+            <div class="loading-content">
+                <div class="spinner"></div>
+                <p class="loading-text">正在分析你的特工协议...</p>
+                <p class="loading-sub">匹配灵魂特工中</p>
+            </div>
+        </div>
+
+        <!-- 结果区域 -->
+        <section id="result-section" class="result-section hidden">
+            <div class="result-card">
+                <h2 id="result-title" class="result-title"></h2>
+                <p id="result-description" class="result-description"></p>
+                <!-- 👇 修改重启按钮文字 -->
+                <button id="restart-btn" class="btn btn-restart">🔄 重新签订协议</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
